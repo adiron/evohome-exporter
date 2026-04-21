@@ -1,0 +1,7 @@
+services:
+  evohome-exporter:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "${PORT:-8082}:${PORT:-8082}"
